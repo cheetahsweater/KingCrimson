@@ -11,8 +11,12 @@ import androidx.appcompat.widget.Toolbar;
 import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.Button;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
+
+    Button button;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -20,6 +24,26 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+
+        button = findViewById(R.id.button1);
+
+        button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                button.setBackgroundColor(android.graphics.Color.YELLOW);
+                Toast.makeText(MainActivity.this, "bruh", Toast.LENGTH_SHORT).show();
+            }
+        });
+
+        button = findViewById(R.id.button2);
+
+        button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                button.setBackgroundColor(android.graphics.Color.BLACK);
+                Toast.makeText(MainActivity.this, "moment", Toast.LENGTH_SHORT).show();
+            }
+        });
 
         FloatingActionButton fab = findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
