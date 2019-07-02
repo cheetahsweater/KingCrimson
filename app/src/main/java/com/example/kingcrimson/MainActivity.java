@@ -16,10 +16,11 @@ import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
-    Button button;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        Button button;
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         Toolbar toolbar = findViewById(R.id.toolbar);
@@ -30,6 +31,7 @@ public class MainActivity extends AppCompatActivity {
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                Button button = (Button) view;
                 button.setBackgroundColor(android.graphics.Color.YELLOW);
                 Toast.makeText(MainActivity.this, "bruh", Toast.LENGTH_SHORT).show();
             }
@@ -40,6 +42,7 @@ public class MainActivity extends AppCompatActivity {
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                Button button = (Button) view;
                 button.setBackgroundColor(android.graphics.Color.BLACK);
                 Toast.makeText(MainActivity.this, "moment", Toast.LENGTH_SHORT).show();
             }
