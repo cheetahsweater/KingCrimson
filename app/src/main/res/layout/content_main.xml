@@ -9,23 +9,22 @@
     tools:context=".MainActivity"
     tools:showIn="@layout/activity_main">
 
-    <Button
+    <ToggleButton
         android:id="@+id/button1"
         android:layout_width="85dp"
         android:layout_height="186dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginRight="8dp"
         android:background="#AAF0E2"
         android:text="L"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/button2"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0" />
 
-    <Button
+    <ToggleButton
         android:id="@+id/button2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="85dp"
+        android:layout_height="187dp"
         android:background="@android:color/holo_orange_light"
         android:text="R"
         app:layout_constraintBottom_toBottomOf="@+id/button1"
