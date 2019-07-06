@@ -11,9 +11,9 @@
 
     <ToggleButton
         android:id="@+id/button1"
-        android:layout_width="85dp"
-        android:layout_height="186dp"
-        android:background="#AAF0E2"
+        android:layout_width="110dp"
+        android:layout_height="110dp"
+        android:background="@mipmap/trang1"
         android:text="L"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/button2"
@@ -23,9 +23,9 @@
 
     <ToggleButton
         android:id="@+id/button2"
-        android:layout_width="85dp"
-        android:layout_height="187dp"
-        android:background="@android:color/holo_orange_light"
+        android:layout_width="110dp"
+        android:layout_height="110dp"
+        android:background="@mipmap/trang3"
         android:text="R"
         app:layout_constraintBottom_toBottomOf="@+id/button1"
         app:layout_constraintEnd_toEndOf="parent"

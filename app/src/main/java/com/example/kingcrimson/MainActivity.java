@@ -38,14 +38,12 @@ public class MainActivity extends AppCompatActivity {
                 if (isChecked) {
                     button2.setBackgroundColor(Color.TRANSPARENT);
                     button2.setTextColor(Color.TRANSPARENT);
-                    button.setBackgroundColor(android.graphics.Color.WHITE);
-                    button.setTextColor(android.graphics.Color.BLACK);
+                    button.setBackgroundResource(R.mipmap.trang2);
+                    button.setTextColor(Color.BLACK);
                 } else {
                     Toast.makeText(MainActivity.this, "We live on a placid island of ignorance in the midst of black seas of infinity, and it was not meant that we should voyage far.", Toast.LENGTH_SHORT).show();
-                    button2.setBackgroundColor(Color.TRANSPARENT);
-                    button2.setTextColor(Color.TRANSPARENT);
-                    button.setBackgroundColor(Color.BLACK);
-                    button.setTextColor(android.graphics.Color.WHITE);
+                    button.setBackgroundResource(R.mipmap.trang1);
+                    button.setTextColor(Color.BLACK);
 
                     Toast.makeText(MainActivity.this, "bruh", Toast.LENGTH_SHORT).show();
                 }
@@ -61,14 +59,12 @@ public class MainActivity extends AppCompatActivity {
                 if (isChecked) {
                     button2.setBackgroundColor(Color.TRANSPARENT);
                     button2.setTextColor(Color.TRANSPARENT);
-                    button.setBackgroundColor(android.graphics.Color.WHITE);
-                    button.setTextColor(android.graphics.Color.BLACK);
+                    button.setBackgroundResource(R.mipmap.trang4);
+                    button.setTextColor(Color.BLACK);
                 } else {
                     Toast.makeText(MainActivity.this, "We live on a placid island of ignorance in the midst of black seas of infinity, and it was not meant that we should voyage far.", Toast.LENGTH_SHORT).show();
-                    button2.setBackgroundColor(Color.TRANSPARENT);
-                    button2.setTextColor(Color.TRANSPARENT);
-                    button.setBackgroundColor(Color.BLACK);
-                    button.setTextColor(android.graphics.Color.WHITE);
+                    button.setBackgroundResource(R.mipmap.trang3);
+                    button.setTextColor(Color.BLACK);
 
                     Toast.makeText(MainActivity.this, "bruh", Toast.LENGTH_SHORT).show();
                 }
