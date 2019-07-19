@@ -14,6 +14,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.Button;
 import android.widget.CompoundButton;
+import android.widget.ProgressBar;
 import android.widget.Toast;
 import android.widget.ToggleButton;
 
@@ -35,16 +36,18 @@ public class MainActivity extends AppCompatActivity {
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
                 ToggleButton button = findViewById(R.id.button1);
                 ToggleButton button2 = findViewById(R.id.button2);
+                ProgressBar progressbar = findViewById(R.id.progressBar);
                 if (isChecked) {
                     button2.setBackgroundColor(Color.TRANSPARENT);
                     button2.setTextColor(Color.TRANSPARENT);
                     button.setBackgroundResource(R.mipmap.trang2);
                     button.setTextColor(Color.BLACK);
+                    progressbar.setVisibility(View.VISIBLE);
                 } else {
                     Toast.makeText(MainActivity.this, "We live on a placid island of ignorance in the midst of black seas of infinity, and it was not meant that we should voyage far.", Toast.LENGTH_SHORT).show();
                     button.setBackgroundResource(R.mipmap.trang1);
                     button.setTextColor(Color.BLACK);
-
+                    progressbar.setVisibility(View.INVISIBLE);
                     Toast.makeText(MainActivity.this, "bruh", Toast.LENGTH_SHORT).show();
                 }
             }
