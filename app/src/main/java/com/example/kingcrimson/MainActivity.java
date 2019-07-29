@@ -9,6 +9,7 @@ import com.google.android.material.snackbar.Snackbar;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
+import android.os.SystemClock;
 import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -31,26 +32,32 @@ public class MainActivity extends AppCompatActivity {
         setSupportActionBar(toolbar);
 
         button = findViewById(R.id.button1);
-
+        Chronometer simpleChronometer = findViewById(R.id.simpleChronometer);
+        Chronometer simpleChronometer2 = findViewById(R.id.simpleChronometer2);
+        simpleChronometer.stop();
+        simpleChronometer2.stop();
         button.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
                 ToggleButton button = findViewById(R.id.button1);
                 ToggleButton button2 = findViewById(R.id.button2);
-                Chronometer simpleChronometer = findViewById(R.id.simpleChronometer);
-                Chronometer simpleChronometer2 = findViewById(R.id.simpleChronometer2);
+
                 ProgressBar progressbar = findViewById(R.id.progressBar);
                 if (isChecked) {
+                    Chronometer simpleChronometer = findViewById(R.id.simpleChronometer);
+                    Chronometer simpleChronometer2 = findViewById(R.id.simpleChronometer2);
                     button2.setBackgroundColor(Color.TRANSPARENT);
                     button2.setTextColor(Color.TRANSPARENT);
                     button.setBackgroundResource(R.mipmap.trang2);
                     button.setTextColor(Color.BLACK);
+                    simpleChronometer.setBase(SystemClock.elapsedRealtime());
                     simpleChronometer.start();
                     simpleChronometer2.stop();
-                    simpleChronometer2.setVisibility(View.VISIBLE);
+                    simpleChronometer.setVisibility(View.VISIBLE);
                     simpleChronometer2.setVisibility(View.INVISIBLE);
                     progressbar.setVisibility(View.VISIBLE);
                 } else {
+                    Chronometer simpleChronometer = findViewById(R.id.simpleChronometer);
                     Toast.makeText(MainActivity.this, "We live on a placid island of ignorance in the midst of black seas of infinity, and it was not meant that we should voyage far.", Toast.LENGTH_SHORT).show();
                     button.setBackgroundResource(R.mipmap.trang1);
                     button.setTextColor(Color.BLACK);
@@ -74,6 +81,7 @@ public class MainActivity extends AppCompatActivity {
                     button2.setTextColor(Color.TRANSPARENT);
                     button.setBackgroundResource(R.mipmap.trang4);
                     button.setTextColor(Color.BLACK);
+                    simpleChronometer.setBase(SystemClock.elapsedRealtime());
                     simpleChronometer.start();
                     simpleChronometer2.stop();
                     simpleChronometer.setVisibility(View.VISIBLE);
