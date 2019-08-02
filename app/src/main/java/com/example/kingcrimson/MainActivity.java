@@ -54,14 +54,13 @@ public class MainActivity extends AppCompatActivity {
                     simpleChronometer.start();
                     simpleChronometer2.stop();
                     simpleChronometer.setVisibility(View.VISIBLE);
-                    simpleChronometer2.setVisibility(View.INVISIBLE);
                     progressbar.setVisibility(View.VISIBLE);
                 } else {
                     Chronometer simpleChronometer = findViewById(R.id.simpleChronometer);
                     Toast.makeText(MainActivity.this, "We live on a placid island of ignorance in the midst of black seas of infinity, and it was not meant that we should voyage far.", Toast.LENGTH_SHORT).show();
                     button.setBackgroundResource(R.mipmap.trang1);
                     button.setTextColor(Color.BLACK);
-                    progressbar.setVisibility(View.INVISIBLE);
+                    simpleChronometer.setVisibility(View.INVISIBLE);
                     simpleChronometer.stop();
                     Toast.makeText(MainActivity.this, "bruh", Toast.LENGTH_SHORT).show();
                 }
@@ -85,12 +84,12 @@ public class MainActivity extends AppCompatActivity {
                     simpleChronometer.start();
                     simpleChronometer2.stop();
                     simpleChronometer.setVisibility(View.VISIBLE);
-                    simpleChronometer2.setVisibility(View.INVISIBLE);
                 } else {
                     Toast.makeText(MainActivity.this, "We live on a placid island of ignorance in the midst of black seas of infinity, and it was not meant that we should voyage far.", Toast.LENGTH_SHORT).show();
                     button.setBackgroundResource(R.mipmap.trang3);
                     button.setTextColor(Color.BLACK);
                     simpleChronometer.stop();
+                    simpleChronometer.setVisibility(View.INVISIBLE);
 
                     Toast.makeText(MainActivity.this, "bruh", Toast.LENGTH_SHORT).show();
                 }
