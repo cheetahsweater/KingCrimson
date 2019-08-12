@@ -22,6 +22,10 @@ import android.widget.ToggleButton;
 
 public class MainActivity extends AppCompatActivity {
 
+    public void setActive(){
+
+    }
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -41,9 +45,9 @@ public class MainActivity extends AppCompatActivity {
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
                 ToggleButton button = findViewById(R.id.button1);
                 ToggleButton button2 = findViewById(R.id.button2);
-
                 ProgressBar progressbar = findViewById(R.id.progressBar);
                 ProgressBar progressbar2 = findViewById(R.id.progressBar2);
+                progressbar2.setVisibility(View.INVISIBLE);
                 if (isChecked) {
                     Chronometer simpleChronometer = findViewById(R.id.simpleChronometer);
                     Chronometer simpleChronometer2 = findViewById(R.id.simpleChronometer2);
@@ -65,6 +69,7 @@ public class MainActivity extends AppCompatActivity {
                     button.setTextColor(Color.BLACK);
                     simpleChronometer.setVisibility(View.INVISIBLE);
                     simpleChronometer.stop();
+                    progressbar.setVisibility(View.INVISIBLE);
                     Toast.makeText(MainActivity.this, "bruh", Toast.LENGTH_SHORT).show();
                 }
             }
@@ -98,6 +103,7 @@ public class MainActivity extends AppCompatActivity {
                     button.setTextColor(Color.BLACK);
                     simpleChronometer.stop();
                     simpleChronometer.setVisibility(View.INVISIBLE);
+                    progressbar.setVisibility(View.INVISIBLE);
 
                     Toast.makeText(MainActivity.this, "bruh", Toast.LENGTH_SHORT).show();
                 }
