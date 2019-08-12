@@ -22,21 +22,41 @@ import android.widget.ToggleButton;
 
 public class MainActivity extends AppCompatActivity {
 
-    public void setActive(){
-
+    public void setActive(ToggleButton button){
+        Chronometer simpleChronometer = findViewById(R.id.simpleChronometer);
+        ProgressBar progressbar = findViewById(R.id.progressBar);
+        button.setBackgroundResource(R.mipmap.trang2);
+        button.setTextColor(Color.BLACK);
+        simpleChronometer.setBase(SystemClock.elapsedRealtime());
+        simpleChronometer.start();
+        simpleChronometer.setVisibility(View.VISIBLE);
+        progressbar.setVisibility(View.VISIBLE);
+        progressbar.bringToFront();
+    }
+    public void setInactive(ToggleButton button) {
+        Chronometer simpleChronometer = findViewById(R.id.simpleChronometer);
+        Toast.makeText(MainActivity.this, "We live on a placid island of ignorance in the midst of black seas of infinity, and it was not meant that we should voyage far.", Toast.LENGTH_SHORT).show();
+        ProgressBar progressbar = findViewById(R.id.progressBar);
+        button.setBackgroundResource(R.mipmap.trang1);
+        button.setTextColor(Color.BLACK);
+        simpleChronometer.stop();
+        simpleChronometer.setVisibility(View.VISIBLE);
+        progressbar.setVisibility(View.INVISIBLE);
+        Toast.makeText(MainActivity.this, "bruh", Toast.LENGTH_SHORT).show();
     }
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        Chronometer simpleChronometer = findViewById(R.id.simpleChronometer);
         ToggleButton button;
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        simpleChronometer.setBase(SystemClock.elapsedRealtime());
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
         button = findViewById(R.id.button1);
-        Chronometer simpleChronometer = findViewById(R.id.simpleChronometer);
         Chronometer simpleChronometer2 = findViewById(R.id.simpleChronometer2);
         simpleChronometer.stop();
         simpleChronometer2.stop();
@@ -53,29 +73,9 @@ public class MainActivity extends AppCompatActivity {
                 ProgressBar progressbar2 = findViewById(R.id.progressBar2);
                 progressbar2.setVisibility(View.INVISIBLE);
                 if (isChecked) {
-                    Chronometer simpleChronometer = findViewById(R.id.simpleChronometer);
-                    Chronometer simpleChronometer2 = findViewById(R.id.simpleChronometer2);
-                    button2.setBackgroundColor(Color.TRANSPARENT);
-                    button2.setTextColor(Color.TRANSPARENT);
-                    button.setBackgroundResource(R.mipmap.trang2);
-                    button.setTextColor(Color.BLACK);
-                    simpleChronometer.setBase(SystemClock.elapsedRealtime());
-                    simpleChronometer.start();
-                    simpleChronometer2.stop();
-                    simpleChronometer.setVisibility(View.VISIBLE);
-                    simpleChronometer2.setVisibility(View.INVISIBLE);
-                    progressbar.setVisibility(View.VISIBLE);
-                    progressbar.bringToFront();
-                    progressbar2.setVisibility(View.INVISIBLE);
+                    setActive(button);
                 } else {
-                    Chronometer simpleChronometer = findViewById(R.id.simpleChronometer);
-                    Toast.makeText(MainActivity.this, "We live on a placid island of ignorance in the midst of black seas of infinity, and it was not meant that we should voyage far.", Toast.LENGTH_SHORT).show();
-                    button.setBackgroundResource(R.mipmap.trang1);
-                    button.setTextColor(Color.BLACK);
-                    simpleChronometer.stop();
-                    simpleChronometer.setVisibility(View.VISIBLE);
-                    progressbar.setVisibility(View.INVISIBLE);
-                    Toast.makeText(MainActivity.this, "bruh", Toast.LENGTH_SHORT).show();
+                    setInactive(button);
                 }
             }
         });
