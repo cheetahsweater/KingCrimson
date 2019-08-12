@@ -40,6 +40,10 @@ public class MainActivity extends AppCompatActivity {
         Chronometer simpleChronometer2 = findViewById(R.id.simpleChronometer2);
         simpleChronometer.stop();
         simpleChronometer2.stop();
+        ProgressBar progressbar = findViewById(R.id.progressBar);
+        ProgressBar progressbar2 = findViewById(R.id.progressBar2);
+        progressbar.setVisibility(View.INVISIBLE);
+        progressbar2.setVisibility(View.INVISIBLE);
         button.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
@@ -68,8 +72,8 @@ public class MainActivity extends AppCompatActivity {
                     Toast.makeText(MainActivity.this, "We live on a placid island of ignorance in the midst of black seas of infinity, and it was not meant that we should voyage far.", Toast.LENGTH_SHORT).show();
                     button.setBackgroundResource(R.mipmap.trang1);
                     button.setTextColor(Color.BLACK);
-                    simpleChronometer.setVisibility(View.INVISIBLE);
                     simpleChronometer.stop();
+                    simpleChronometer.setVisibility(View.VISIBLE);
                     progressbar.setVisibility(View.INVISIBLE);
                     Toast.makeText(MainActivity.this, "bruh", Toast.LENGTH_SHORT).show();
                 }
@@ -104,7 +108,7 @@ public class MainActivity extends AppCompatActivity {
                     button.setBackgroundResource(R.mipmap.trang3);
                     button.setTextColor(Color.BLACK);
                     simpleChronometer.stop();
-                    simpleChronometer.setVisibility(View.INVISIBLE);
+                    simpleChronometer.setVisibility(View.VISIBLE);
                     progressbar.setVisibility(View.INVISIBLE);
 
                     Toast.makeText(MainActivity.this, "bruh", Toast.LENGTH_SHORT).show();
