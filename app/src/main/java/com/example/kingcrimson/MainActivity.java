@@ -59,6 +59,7 @@ public class MainActivity extends AppCompatActivity {
                     simpleChronometer.start();
                     simpleChronometer2.stop();
                     simpleChronometer.setVisibility(View.VISIBLE);
+                    simpleChronometer2.setVisibility(View.INVISIBLE);
                     progressbar.setVisibility(View.VISIBLE);
                     progressbar.bringToFront();
                     progressbar2.setVisibility(View.INVISIBLE);
@@ -94,6 +95,7 @@ public class MainActivity extends AppCompatActivity {
                     simpleChronometer.start();
                     simpleChronometer2.stop();
                     simpleChronometer.setVisibility(View.VISIBLE);
+                    simpleChronometer2.setVisibility(View.INVISIBLE);
                     progressbar.setVisibility(View.VISIBLE);
                     progressbar.bringToFront();
                     progressbar2.setVisibility(View.INVISIBLE);
