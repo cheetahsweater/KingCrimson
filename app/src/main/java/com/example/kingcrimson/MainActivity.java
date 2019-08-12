@@ -43,6 +43,7 @@ public class MainActivity extends AppCompatActivity {
                 ToggleButton button2 = findViewById(R.id.button2);
 
                 ProgressBar progressbar = findViewById(R.id.progressBar);
+                ProgressBar progressbar2 = findViewById(R.id.progressBar2);
                 if (isChecked) {
                     Chronometer simpleChronometer = findViewById(R.id.simpleChronometer);
                     Chronometer simpleChronometer2 = findViewById(R.id.simpleChronometer2);
@@ -55,6 +56,8 @@ public class MainActivity extends AppCompatActivity {
                     simpleChronometer2.stop();
                     simpleChronometer.setVisibility(View.VISIBLE);
                     progressbar.setVisibility(View.VISIBLE);
+                    progressbar.bringToFront();
+                    progressbar2.setVisibility(View.INVISIBLE);
                 } else {
                     Chronometer simpleChronometer = findViewById(R.id.simpleChronometer);
                     Toast.makeText(MainActivity.this, "We live on a placid island of ignorance in the midst of black seas of infinity, and it was not meant that we should voyage far.", Toast.LENGTH_SHORT).show();
@@ -75,6 +78,8 @@ public class MainActivity extends AppCompatActivity {
                 ToggleButton button2 = findViewById(R.id.button1);
                 Chronometer simpleChronometer = findViewById(R.id.simpleChronometer2);
                 Chronometer simpleChronometer2 = findViewById(R.id.simpleChronometer);
+                ProgressBar progressbar = findViewById(R.id.progressBar2);
+                ProgressBar progressbar2 = findViewById(R.id.progressBar);
                 if (isChecked) {
                     button2.setBackgroundColor(Color.TRANSPARENT);
                     button2.setTextColor(Color.TRANSPARENT);
@@ -84,6 +89,9 @@ public class MainActivity extends AppCompatActivity {
                     simpleChronometer.start();
                     simpleChronometer2.stop();
                     simpleChronometer.setVisibility(View.VISIBLE);
+                    progressbar.setVisibility(View.VISIBLE);
+                    progressbar.bringToFront();
+                    progressbar2.setVisibility(View.INVISIBLE);
                 } else {
                     Toast.makeText(MainActivity.this, "We live on a placid island of ignorance in the midst of black seas of infinity, and it was not meant that we should voyage far.", Toast.LENGTH_SHORT).show();
                     button.setBackgroundResource(R.mipmap.trang3);
