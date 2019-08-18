@@ -22,7 +22,7 @@ import android.widget.ToggleButton;
 
 public class MainActivity extends AppCompatActivity {
 
-    public void setActive(ToggleButton button){
+    private void setActive(ToggleButton button){
         Chronometer simpleChronometer = findViewById(R.id.simpleChronometer);
         ProgressBar progressbar = findViewById(R.id.progressBar);
         button.setBackgroundResource(R.mipmap.trang2);
@@ -33,7 +33,7 @@ public class MainActivity extends AppCompatActivity {
         progressbar.setVisibility(View.VISIBLE);
         progressbar.bringToFront();
     }
-    public void setInactive(ToggleButton button) {
+    private void setInactive(ToggleButton button) {
         Chronometer simpleChronometer = findViewById(R.id.simpleChronometer);
         Toast.makeText(MainActivity.this, "We live on a placid island of ignorance in the midst of black seas of infinity, and it was not meant that we should voyage far.", Toast.LENGTH_SHORT).show();
         ProgressBar progressbar = findViewById(R.id.progressBar);
