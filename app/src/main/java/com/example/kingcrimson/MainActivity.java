@@ -1,6 +1,8 @@
 package com.example.kingcrimson;
 
+import android.content.Context;
 import android.graphics.Color;
+import android.media.MediaPlayer;
 import android.os.Bundle;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
@@ -21,6 +23,8 @@ import android.widget.Toast;
 import android.widget.ToggleButton;
 
 public class MainActivity extends AppCompatActivity {
+
+    private static Context context;
 
     private void setActive(ToggleButton button){
         Chronometer simpleChronometer = findViewById(R.id.simpleChronometer);
@@ -50,6 +54,9 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         Chronometer simpleChronometer = findViewById(R.id.simpleChronometer);
         ToggleButton button;
+        MainActivity.context=getApplicationContext();
+        MediaPlayer mediaPlayer = MediaPlayer.create(context, R.raw.mammioux);
+        mediaPlayer.start();
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         simpleChronometer.setBase(SystemClock.elapsedRealtime());
